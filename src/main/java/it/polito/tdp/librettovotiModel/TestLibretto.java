@@ -26,6 +26,17 @@ public class TestLibretto {
 	  Libretto librettoVenticinque= libretto.votiUguali(25);
 	  System.out.println(librettoVenticinque); //è un oggetto diverso, cambia stampa e funzionalità
 	  
+	  Voto fisica=libretto.ricercaCorso("Fisica 1");
+	  Voto fisica_doppio=new Voto("Fisica 1", 25, LocalDate.of(2021,  1, 18));
+	  Voto fisica_conflitto=new Voto("Fisica 1", 28, LocalDate.of(2021,  1, 18));
+	  
+	  System.out.println(fisica + " doppione di " + fisica_doppio + "? --> " + libretto.esisteDuplicato(fisica_doppio));
+	  
+	  System.out.println(fisica + " conflitto con " + fisica_conflitto + "? --> " + libretto.esisteConflitto(fisica_conflitto));
+	
+	  //altri casi...
+	  
+	  
 	  
 	}
 	
